@@ -1,0 +1,28 @@
+.flex-row-container {
+    display: flex;
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 33%;
+    justify-content: space-around;
+    padding: 15px;
+}
+
+.flex-col-container {
+    margin: 0;
+    width: 145px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.symbolName {
+    color: white;
+    
+}
+
+.fullName {
+    color: gray;
+}

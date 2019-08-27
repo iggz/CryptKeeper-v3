@@ -1,0 +1,3 @@
+# These owners will be default owners for everything in the repo They will be
+# the ones responsible for code reviews involved with merge requests.
+*	@jf-2020

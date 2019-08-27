@@ -1,0 +1,11 @@
+.row-div {
+    display: flex;
+    height: 80px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    background-color: #0D1C25;
+    border: 10;
+    color: white;
+    
+    }
