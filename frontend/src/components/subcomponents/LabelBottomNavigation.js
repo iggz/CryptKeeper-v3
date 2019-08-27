@@ -4,8 +4,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import List from '@material-ui/icons/List';
+import TrendingUp from '@material-ui/icons/TrendingUp';
 
-import FavoriteIcon from '@material-ui/icons/Favorite';
 
 
 import AccountBox from '@material-ui/icons/AccountBox';
@@ -36,32 +36,32 @@ export default function LabelBottomNavigation() {
 
     return (
 
-        <BottomNavigation style={{color: '#00C689'}} value={ value } onChange={ handleChange } className={ classes.root }>
-            <BottomNavigationAction style={{color: '#00C689'}}
+        <BottomNavigation style={ { color: '#00C689' } } value={ value } onChange={ handleChange } className={ classes.root }>
+            <BottomNavigationAction style={ { color: '#00C689' } }
                 label="Dashboard"
                 value="dashboard"
-                icon={ <List style={{color: '#00C689'}}/> }
+                icon={ <List style={ { color: '#00C689' } } /> }
                 component={ Link }
                 to="/one"
             />
-            <BottomNavigationAction style={{color: '#00C689'}}
-                label="Favorites"
-                value="favorites"
-                icon={ <FavoriteIcon style={{color: '#00C689'}}/> }
+            <BottomNavigationAction style={ { color: '#00C689' } }
+                label="Charts"
+                value="charts"
+                icon={ <TrendingUp style={ { color: '#00C689' } } /> }
                 component={ Link }
                 to="/two"
             />
-            <BottomNavigationAction style={{color: '#00C689'}}
+            <BottomNavigationAction style={ { color: '#00C689' } }
                 label="Portfolio"
                 value="portfolio"
-                icon={ <DonutLarge style={{color: '#00C689'}}>folder</DonutLarge> }
+                icon={ <DonutLarge style={ { color: '#00C689' } }>folder</DonutLarge> }
                 component={ Link }
                 to="/three"
             />
-            <BottomNavigationAction style={{color: '#00C689'}}
+            <BottomNavigationAction style={ { color: '#00C689' } }
                 label="Account"
                 value="account"
-                icon={ <AccountBox style={{color: '#00C689'}}/> }
+                icon={ <AccountBox style={ { color: '#00C689' } } /> }
                 component={ Link }
                 to="/four"
             />

@@ -66,7 +66,7 @@ class LandingPage extends Component {
                                 <></>
                             ) }
                     </Box>
-                    <div style={ { height: 500, background: '#09171E' } }>
+                    <div style={ { height: 600, background: '#09171E' } }>
                         <img src={ Logo } alt={ 'CryptKeeper' }></img>
 
                     </div>
