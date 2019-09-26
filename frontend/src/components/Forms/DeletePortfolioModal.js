@@ -47,7 +47,7 @@ class DeletePortfolioModal extends Component {
     async handleSubmit(event) {
         event.preventDefault();
 
-        const url = `http://localhost:9000/portfolios/${this.state.userId}/delete`;
+        const url = `http://ec2-18-217-175-167.us-east-2.compute.amazonaws.com/portfolios/${this.state.userId}/delete`;
         const response = await fetch(url, {
             method: "POST",
             headers: {
@@ -78,11 +78,11 @@ class DeletePortfolioModal extends Component {
     render() {
         return (
             <div>
-                <Button variant="outlined" color="primary" onClick={this.handleOpen}>
+                <Button variant="outlined" color="primary" onClick={ this.handleOpen }>
                     Delete Portfolio
                 </Button>
-                <Dialog open={this.state.open} onClose={this.handleClose} aria-labelledby="form-dialog-title">
-                    <form onSubmit={this.handleSubmit}>
+                <Dialog open={ this.state.open } onClose={ this.handleClose } aria-labelledby="form-dialog-title">
+                    <form onSubmit={ this.handleSubmit }>
                         <DialogTitle id="form-dialog-title">Delete Portfolio</DialogTitle>
                         <DialogContent>
                             <TextField
@@ -92,12 +92,12 @@ class DeletePortfolioModal extends Component {
                                 label="Porfolio Name"
                                 type="text"
                                 fullWidth
-                                value={this.state.portfolioName}
-                                onChange={this.handleChange}
+                                value={ this.state.portfolioName }
+                                onChange={ this.handleChange }
                             />
                         </DialogContent>
                         <DialogActions>
-                            <Button type="submit" onClick={this.handleClose} color="primary">
+                            <Button type="submit" onClick={ this.handleClose } color="primary">
                                 Delete Portfolio
                         </Button>
                         </DialogActions>

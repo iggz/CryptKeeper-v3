@@ -46,7 +46,7 @@ class AddPortfolioModal extends Component {
     async handleSubmit(event) {
         event.preventDefault();
 
-        const url = `http://localhost:9000/portfolios/${this.state.userId}/add`;
+        const url = `http://ec2-18-217-175-167.us-east-2.compute.amazonaws.com/${this.state.userId}/add`;
         const response = await fetch(url, {
             method: "POST",
             headers: {
@@ -77,11 +77,11 @@ class AddPortfolioModal extends Component {
     render() {
         return (
             <div>
-                <Button variant="outlined" color="primary" onClick={this.handleOpen}>
+                <Button variant="outlined" color="primary" onClick={ this.handleOpen }>
                     Add Portfolio
                 </Button>
-                <Dialog open={this.state.open} onClose={this.handleClose} aria-labelledby="form-dialog-title">
-                    <form onSubmit={this.handleSubmit}>
+                <Dialog open={ this.state.open } onClose={ this.handleClose } aria-labelledby="form-dialog-title">
+                    <form onSubmit={ this.handleSubmit }>
                         <DialogTitle id="form-dialog-title">Add Portfolio</DialogTitle>
                         <DialogContent>
                             <TextField
@@ -91,12 +91,12 @@ class AddPortfolioModal extends Component {
                                 label="Porfolio Name"
                                 type="text"
                                 fullWidth
-                                value={this.state.portfolioName}
-                                onChange={this.handleChange}
+                                value={ this.state.portfolioName }
+                                onChange={ this.handleChange }
                             />
                         </DialogContent>
                         <DialogActions>
-                            <Button type="submit" onClick={this.handleClose} color="primary">
+                            <Button type="submit" onClick={ this.handleClose } color="primary">
                                 Add Portfolio
                             </Button>
                         </DialogActions>

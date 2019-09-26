@@ -81,7 +81,7 @@ class AddCoinModal extends Component {
         const userId = store.getItem('user');
         const portfolioName = store.getItem('tab');
 
-        const url = `http://localhost:9000/portfolios/${userId}/coinAdd`;
+        const url = `http://ec2-18-217-175-167.us-east-2.compute.amazonaws.com/${userId}/coinAdd`;
 
         await fetch(url, {
             method: "POST",
@@ -103,11 +103,11 @@ class AddCoinModal extends Component {
 
         return (
             <div>
-                <Button variant="outlined" color="primary" onClick={this.handleOpen}>
+                <Button variant="outlined" color="primary" onClick={ this.handleOpen }>
                     Add Coin
                 </Button>
-                <Dialog open={this.state.open} onClose={this.handleClose} aria-labelledby="form-dialog-title">
-                    <form onSubmit={this.handleSubmit}>
+                <Dialog open={ this.state.open } onClose={ this.handleClose } aria-labelledby="form-dialog-title">
+                    <form onSubmit={ this.handleSubmit }>
                         <DialogTitle id="form-dialog-title">Add Coin</DialogTitle>
                         <DialogContent>
                             <TextField
@@ -117,8 +117,8 @@ class AddCoinModal extends Component {
                                 type="text"
                                 margin="dense"
                                 fullWidth
-                                onChange={this.handleCoinName}
-                                value={this.state.coinName}
+                                onChange={ this.handleCoinName }
+                                value={ this.state.coinName }
                             />
                             <TextField
                                 name="coinAmount"
@@ -126,8 +126,8 @@ class AddCoinModal extends Component {
                                 type="number"
                                 margin="dense"
                                 fullWidth
-                                onChange={this.handleCoinAmount}
-                                value={this.state.coinAmount}
+                                onChange={ this.handleCoinAmount }
+                                value={ this.state.coinAmount }
                             />
                             <TextField
                                 name="date"
@@ -135,8 +135,8 @@ class AddCoinModal extends Component {
                                 type="text"
                                 margin="dense"
                                 fullWidth
-                                onChange={this.handleDate}
-                                value={this.state.date}
+                                onChange={ this.handleDate }
+                                value={ this.state.date }
                             />
                             <TextField
                                 name="coinPrice"
@@ -144,12 +144,12 @@ class AddCoinModal extends Component {
                                 type="number"
                                 margin="dense"
                                 fullWidth
-                                onChange={this.handleCoinPrice}
-                                value={this.state.coinPrice}
+                                onChange={ this.handleCoinPrice }
+                                value={ this.state.coinPrice }
                             />
                         </DialogContent>
                         <DialogActions>
-                            <Button type="submit" value="Submit" onClick={this.handleClose} color="primary">
+                            <Button type="submit" value="Submit" onClick={ this.handleClose } color="primary">
                                 Add Coin
                             </Button>
                         </DialogActions>

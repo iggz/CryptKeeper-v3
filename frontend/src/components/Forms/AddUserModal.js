@@ -77,7 +77,7 @@ class AddUserModal extends Component {
     async handleSubmit(e) {
         e.preventDefault();
 
-        const url = 'http://localhost:9000/users/signup';
+        const url = 'http://ec2-18-217-175-167.us-east-2.compute.amazonaws.com/users/signup';
 
         await fetch(url, {
             method: "POST",

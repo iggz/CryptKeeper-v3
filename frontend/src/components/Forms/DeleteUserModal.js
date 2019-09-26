@@ -53,7 +53,7 @@ class DeleteUserModal extends Component {
     async handleSubmit(e) {
         e.preventDefault();
 
-        const url = `http://localhost:9000/users/delete`;
+        const url = `http://ec2-18-217-175-167.us-east-2.compute.amazonaws.com/users/delete`;
 
         const response = await fetch(url, {
             method: "POST",
@@ -84,15 +84,15 @@ class DeleteUserModal extends Component {
 
         return (
             <div>
-                {isDeleted ? (
+                { isDeleted ? (
                     <Redirect to="/" />
                 ) : (
                         <>
-                            <Button variant="outlined" color="primary" onClick={this.handleOpen}>
+                            <Button variant="outlined" color="primary" onClick={ this.handleOpen }>
                                 Delete User
                             </Button>
-                            <Dialog open={this.state.open} onClose={this.handleClose} aria-labelledby="form-dialog-title">
-                                <form onSubmit={this.handleSubmit}>
+                            <Dialog open={ this.state.open } onClose={ this.handleClose } aria-labelledby="form-dialog-title">
+                                <form onSubmit={ this.handleSubmit }>
                                     <DialogTitle id="form-dialog-title">Delete User</DialogTitle>
                                     <DialogContent>
                                         <TextField
@@ -102,8 +102,8 @@ class DeleteUserModal extends Component {
                                             margin="dense"
                                             fullWidth
                                             placeholder="Satoshi@Nakamoto.com"
-                                            onChange={this.handleEmail}
-                                            value={this.state.email}
+                                            onChange={ this.handleEmail }
+                                            value={ this.state.email }
                                             required
                                         />
                                         <TextField
@@ -113,20 +113,20 @@ class DeleteUserModal extends Component {
                                             margin="dense"
                                             fullWidth
                                             placeholder="Bitcoin"
-                                            onChange={this.handlePassword}
-                                            value={this.state.password}
+                                            onChange={ this.handlePassword }
+                                            value={ this.state.password }
                                             required
                                         />
                                     </DialogContent>
                                     <DialogActions>
-                                        <Button type="submit" value="Submit" onClick={this.handleClose} color="primary">
+                                        <Button type="submit" value="Submit" onClick={ this.handleClose } color="primary">
                                             Delete User
                                         </Button>
                                     </DialogActions>
                                 </form>
                             </Dialog>
                         </>
-                    )}
+                    ) }
             </div>
         );
     }
