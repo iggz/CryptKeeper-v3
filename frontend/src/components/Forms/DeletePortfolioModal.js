@@ -47,7 +47,7 @@ class DeletePortfolioModal extends Component {
     async handleSubmit(event) {
         event.preventDefault();
 
-        const url = `http://ec2-18-217-175-167.us-east-2.compute.amazonaws.com/portfolios/${this.state.userId}/delete`;
+        const url = `http://localhost:9000/portfolios/${this.state.userId}/delete`;
         const response = await fetch(url, {
             method: "POST",
             headers: {

@@ -81,7 +81,7 @@ class AddCoinModal extends Component {
         const userId = store.getItem('user');
         const portfolioName = store.getItem('tab');
 
-        const url = `http://ec2-18-217-175-167.us-east-2.compute.amazonaws.com/${userId}/coinAdd`;
+        const url = `http://localhost:9000/portfolios/${userId}/coinAdd`;
 
         await fetch(url, {
             method: "POST",
