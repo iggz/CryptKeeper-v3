@@ -53,7 +53,7 @@ class DeleteUserModal extends Component {
     async handleSubmit(e) {
         e.preventDefault();
 
-        const url = `http://localhost:9000/users/delete`;
+        const url = `https://localhost:9000/users/delete`;
 
         const response = await fetch(url, {
             method: "POST",

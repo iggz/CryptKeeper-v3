@@ -53,7 +53,7 @@ class UserLoginModal extends Component {
     async handleLoginSubmit(e) {
         e.preventDefault();
 
-        const url = `http://localhost:9000/users/login`;
+        const url = `https://localhost:9000/users/login`;
 
         const response = await fetch(url, {
             method: "POST",
@@ -87,7 +87,7 @@ class UserLoginModal extends Component {
     async handleLogoutSubmit(e) {
         e.preventDefault();
 
-        const url = `http://localhost:9000/users/logout`;
+        const url = `https://localhost:9000/users/logout`;
 
         const response = await fetch(url, {
             method: "POST",
@@ -123,13 +123,13 @@ class UserLoginModal extends Component {
 
         return (
             <>
-                {isLoggedIn ? (
+                { isLoggedIn ? (
                     <>
-                        <Button variant="outlined" color="primary" onClick={this.handleOpen}>
+                        <Button variant="outlined" color="primary" onClick={ this.handleOpen }>
                             Logout
                         </Button>
-                        <Dialog open={this.state.open} onClose={this.handleClose} aria-labelledby="form-dialog-title">
-                            <form onSubmit={this.handleLogoutSubmit}>
+                        <Dialog open={ this.state.open } onClose={ this.handleClose } aria-labelledby="form-dialog-title">
+                            <form onSubmit={ this.handleLogoutSubmit }>
                                 <DialogTitle id="form-dialog-title">Logout</DialogTitle>
                                 <DialogContent>
                                     <TextField
@@ -139,8 +139,8 @@ class UserLoginModal extends Component {
                                         margin="dense"
                                         fullWidth
                                         placeholder="Satoshi@Nakamoto.com"
-                                        onChange={this.handleEmail}
-                                        value={this.state.email}
+                                        onChange={ this.handleEmail }
+                                        value={ this.state.email }
                                         required
                                     />
                                     <TextField
@@ -150,13 +150,13 @@ class UserLoginModal extends Component {
                                         margin="dense"
                                         fullWidth
                                         placeholder="Bitcoin"
-                                        onChange={this.handlePassword}
-                                        value={this.state.password}
+                                        onChange={ this.handlePassword }
+                                        value={ this.state.password }
                                         required
                                     />
                                 </DialogContent>
                                 <DialogActions>
-                                    <Button type="submit" value="Submit" onClick={this.handleClose} color="primary">
+                                    <Button type="submit" value="Submit" onClick={ this.handleClose } color="primary">
                                         Logout
                                     </Button>
                                 </DialogActions>
@@ -165,11 +165,11 @@ class UserLoginModal extends Component {
                     </>
                 ) : (
                         <>
-                            <Button variant="outlined" color="primary" onClick={this.handleOpen}>
+                            <Button variant="outlined" color="primary" onClick={ this.handleOpen }>
                                 Login
                             </Button>
-                            <Dialog open={this.state.open} onClose={this.handleClose} aria-labelledby="form-dialog-title">
-                                <form onSubmit={this.handleLoginSubmit}>
+                            <Dialog open={ this.state.open } onClose={ this.handleClose } aria-labelledby="form-dialog-title">
+                                <form onSubmit={ this.handleLoginSubmit }>
                                     <DialogTitle id="form-dialog-title">Login</DialogTitle>
                                     <DialogContent>
                                         <TextField
@@ -179,8 +179,8 @@ class UserLoginModal extends Component {
                                             margin="dense"
                                             fullWidth
                                             placeholder="Satoshi@Nakamoto.com"
-                                            onChange={this.handleEmail}
-                                            value={this.state.email}
+                                            onChange={ this.handleEmail }
+                                            value={ this.state.email }
                                             required
                                         />
                                         <TextField
@@ -190,20 +190,20 @@ class UserLoginModal extends Component {
                                             margin="dense"
                                             fullWidth
                                             placeholder="Bitcoin"
-                                            onChange={this.handlePassword}
-                                            value={this.state.password}
+                                            onChange={ this.handlePassword }
+                                            value={ this.state.password }
                                             required
                                         />
                                     </DialogContent>
                                     <DialogActions>
-                                        <Button type="submit" value="Submit" onClick={this.handleClose} color="primary">
+                                        <Button type="submit" value="Submit" onClick={ this.handleClose } color="primary">
                                             Login
                                         </Button>
                                     </DialogActions>
                                 </form>
                             </Dialog>
                         </>
-                    )}
+                    ) }
             </>
         );
     }

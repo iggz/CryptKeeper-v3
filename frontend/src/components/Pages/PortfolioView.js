@@ -77,7 +77,7 @@ class PortfolioView extends Component {
     }
 
     async componentDidMount() {
-        const url = `http://localhost:9000/portfolios/${this.state.userId}/get`;
+        const url = `https://localhost:9000/portfolios/${this.state.userId}/get`;
         const response = await fetch(url, {
             method: "POST",
             headers: {
