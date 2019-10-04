@@ -77,7 +77,7 @@ class AddUserModal extends Component {
     async handleSubmit(e) {
         e.preventDefault();
 
-        const url = 'https://localhost:9000/users/signup';
+        const url = 'https://api.crypt-keeper.com/users/signup';
 
         await fetch(url, {
             method: "POST",

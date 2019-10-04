@@ -53,7 +53,7 @@ class UserLoginModal extends Component {
     async handleLoginSubmit(e) {
         e.preventDefault();
 
-        const url = `https://localhost:9000/users/login`;
+        const url = `https://api.crypt-keeper.com/users/login`;
 
         const response = await fetch(url, {
             method: "POST",
@@ -87,7 +87,7 @@ class UserLoginModal extends Component {
     async handleLogoutSubmit(e) {
         e.preventDefault();
 
-        const url = `https://localhost:9000/users/logout`;
+        const url = `https://api.crypt-keeper.com/users/logout`;
 
         const response = await fetch(url, {
             method: "POST",

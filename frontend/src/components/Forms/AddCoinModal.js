@@ -81,7 +81,7 @@ class AddCoinModal extends Component {
         const userId = store.getItem('user');
         const portfolioName = store.getItem('tab');
 
-        const url = `https://localhost:9000/portfolios/${userId}/coinAdd`;
+        const url = `https://api.crypt-keeper.com/portfolios/${userId}/coinAdd`;
 
         await fetch(url, {
             method: "POST",

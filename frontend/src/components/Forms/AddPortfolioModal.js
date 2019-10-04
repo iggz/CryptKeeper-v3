@@ -46,7 +46,7 @@ class AddPortfolioModal extends Component {
     async handleSubmit(event) {
         event.preventDefault();
 
-        const url = `https://localhost:9000/portfolios/${this.state.userId}/add`;
+        const url = `https://api.crypt-keeper.com/portfolios/${this.state.userId}/add`;
         const response = await fetch(url, {
             method: "POST",
             headers: {
