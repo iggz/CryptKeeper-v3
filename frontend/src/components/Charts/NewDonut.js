@@ -39,11 +39,18 @@ const NewDonut = (props) => {
     return (
         <>
             <div>
+                <Doughnut
+                    data={ data_to_pass_in }
+                    width={ 400 }
 
-                <Doughnut data={ data_to_pass_in } options={ {
-                    cutoutPercentage: 80,
-                    rotation: 120
-                } } />
+
+                    options={ {
+                        cutoutPercentage: 80,
+                        rotation: 120,
+                        maintainAspectRation: false
+                    } }
+
+                />
             </div>
         </>
     );

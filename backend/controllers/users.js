@@ -9,12 +9,14 @@ exports.signup_post = async (req, res) => {
     const hash = await bcrypt.hashSync(password, salt);
 
     const userInstance = new User(null, firstName, lastName, email, hash);
+    console.log("userInstance:", userInstance);
 
     try {
         await userInstance.save();
         res.sendStatus(200);
     } catch (error) {
         console.log("signup_post error:", error.message);
+        console.log("userInstance in catch: ", userInstance);
         return error.message;
     }
 }

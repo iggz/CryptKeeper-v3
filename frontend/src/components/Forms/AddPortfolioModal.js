@@ -78,7 +78,7 @@ class AddPortfolioModal extends Component {
         return (
             <div>
                 <Button variant="outlined" color="primary" onClick={ this.handleOpen }>
-                    Add Portfolio
+                    Create Portfolio
                 </Button>
                 <Dialog open={ this.state.open } onClose={ this.handleClose } aria-labelledby="form-dialog-title">
                     <form onSubmit={ this.handleSubmit }>

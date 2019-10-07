@@ -15,6 +15,7 @@ class AddCoinModal extends Component {
             open: false,
             portfolio_id: '',
             coinName: '',
+            coinSymbol: '',
             coinAmount: '',
             date: '',
             coinPrice: '',
@@ -24,6 +25,7 @@ class AddCoinModal extends Component {
         this.handleOpen = this.handleOpen.bind(this);
         this.handleClose = this.handleClose.bind(this);
         this.handleCoinName = this.handleCoinName.bind(this);
+        this.handleCoinSymbol = this.handleCoinSymbol.bind(this);
         this.handleCoinAmount = this.handleCoinAmount.bind(this);
         this.handleDate = this.handleDate.bind(this);
         this.handleCoinPrice = this.handleCoinPrice.bind(this);
@@ -51,6 +53,13 @@ class AddCoinModal extends Component {
         e.preventDefault();
         this.setState({
             coinName: e.target.value
+        })
+    };
+
+    handleCoinSymbol(e) {
+        e.preventDefault();
+        this.setState({
+            coinSymbol: e.target.value
         })
     };
 
@@ -119,6 +128,16 @@ class AddCoinModal extends Component {
                                 fullWidth
                                 onChange={ this.handleCoinName }
                                 value={ this.state.coinName }
+                            />
+                            <TextField
+
+                                name="coinSymbol"
+                                label="Coin Symbol (ex 'BTC')"
+                                type="text"
+                                margin="dense"
+                                fullWidth
+                                onChange={ this.handleCoinSymbol }
+                                value={ this.state.coinSymbol }
                             />
                             <TextField
                                 name="coinAmount"
