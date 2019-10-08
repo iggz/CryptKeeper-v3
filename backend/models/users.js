@@ -22,10 +22,14 @@ class User {
             '${this.last_name}',
             '${this.email}',
             '${this.password}'
-        )`;
+        )
+        RETURNING user_id
+        `;
         try {
-            await db.none(query);
+            const id = await db.one(query);
+            console.log("id is:", id);
             console.log(`User: ${this.first_name} successfully added.`);
+            return "Jonathan is super awesome and helpful and is a 1337 H4X0R"
         } catch (err) {
             console.log("save() error:", error.message);
             return error.message;
