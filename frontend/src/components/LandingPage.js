@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import SearchAppBar from './subcomponents/SearchAppBar';
 import LabelBottomNavigation from './subcomponents/LabelBottomNavigation';
 import Box from '@material-ui/core/Box';
-import Logo from "../Images/CryptKeeper.jpg";
+// import Logo from "../Images/CryptKeeper.jpg";
 
 class LandingPage extends Component {
     constructor(props) {
@@ -67,13 +67,20 @@ class LandingPage extends Component {
                             ) }
                     </Box>
                     <div style={ { height: 600, background: '#09171E', textAlign: 'center' } }>
-                        <img src={ Logo } alt={ 'CryptKeeper' }></img>
-
+                        {/* <img src={ Logo } alt={ 'CryptKeeper' }></img> */ }
+                        <h1 style={ { color: 'white' } } > Welcome to CryptKeeper!</h1>
+                        <br></br>
+                        <p style={ { color: 'white' } } >
+                            CryptKeeper is designed to be a Progressive Web App
+                        </p>
+                        <p style={ { color: 'white', border: 10, margin: 10 } } >
+                            This project was originally started in React Native but after a short development period, we realized that we didn't need to use React Native to build our App.  Instead we chose to build a PWA which could be turned into a mobile app.  However, due to the short time frame of the project, this project has not yet been turned into a mobile app nor has it been adjusted to respond to larger than mobile screen sizes.  It is best viewed on an iPhone 6/7/8 Plus. Sorry for the inconveniece.
+                        </p>
                     </div>
 
                     <LabelBottomNavigation />
                 </Box>
-            </div>
+            </div >
         )
     }
 }

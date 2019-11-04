@@ -100,6 +100,7 @@ class AddCoinModal extends Component {
             },
             body: JSON.stringify({
                 coinName: this.state.coinName,
+                coinSymbol: this.state.coinSymbol,
                 coinAmount: this.state.coinAmount,
                 date: this.state.date,
                 coinPrice: this.state.coinPrice,

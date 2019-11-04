@@ -24,13 +24,13 @@ class Coin {
                     amount,
                     price
                 ) VALUES (
-                    ${max_coin_id + 1},
-                    ${this.portfolio_id},
-                    ${this.user_id},
+                    '${max_coin_id + 1}',
+                    '${this.portfolio_id}',
+                    '${this.user_id}',
                     '${this.name}',
                     '${this.symbol}',
-                    ${this.amount},
-                    ${this.price}
+                    '${this.amount}',
+                    '${this.price}'
                 )
         `
         try {
