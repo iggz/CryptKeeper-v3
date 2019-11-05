@@ -66,7 +66,9 @@ class BaseTemplate extends Component {
                                 <></>
                             ) }
                     </Box>
-                    <div style={ { height: 600, background: '#09171E' } }>
+                    <div
+                        style={ { height: 2000, background: '#09171E' } }
+                    >
 
 
                     </div>

@@ -41,30 +41,32 @@ export default function LineChart(props) {
     return (
         <div style={ { position: "relative", padding: 20 } }>
             {/* <h2>Line Example</h2> */ }
-            <Line data={ data } options={ {
-                responsive: true,
-                fill: true,
-                scales: {
-                    yAxes: [
-                        {
-                            gridLines: {
-                                color: '#aaa',
-                                borderDash: [1, 3],
+            <Line
+                data={ data }
+                options={ {
+                    responsive: true,
+                    fill: true,
+                    scales: {
+                        yAxes: [
+                            {
+                                gridLines: {
+                                    color: '#aaa',
+                                    borderDash: [1, 3],
+                                },
+                                display: false, // this will hide vertical lines
                             },
-                            display: false, // this will hide vertical lines
-                        },
-                    ],
-                    xAxes: [
-                        {
-                            gridLines: {
-                                color: '#aaa',
-                                borderDash: [1, 3],
+                        ],
+                        xAxes: [
+                            {
+                                gridLines: {
+                                    color: '#aaa',
+                                    borderDash: [1, 3],
+                                },
+                                display: false, // this will hide vertical lines
                             },
-                            display: false, // this will hide vertical lines
-                        },
-                    ],
-                },
-            } } />
+                        ],
+                    },
+                } } />
         </div>
     );
 };

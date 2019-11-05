@@ -21,8 +21,10 @@ export default class WatchExpansionPanel extends React.Component {
 
         return (
             <div onClick={ () => { this._fetchHistoricalData(this.props.id) } }>
+                <div style={ { height: .5, background: '#00C689' } }></div>
                 <div style={ { color: '#09171E', width: '100%' } } >
                     <ExpansionPanel style={ { background: '#09171E' } } >
+
                         <ExpansionPanelSummary
                             expandIcon={ <ExpandMoreIcon style={ { color: 'white' } } /> }
                             aria-controls="panel1a-content"
@@ -33,8 +35,10 @@ export default class WatchExpansionPanel extends React.Component {
                         <ExpansionPanelDetails>
                             <LineChart data={ this.state.coinData } coinName={ coin } />
                         </ExpansionPanelDetails>
+
                     </ExpansionPanel>
                 </div>
+                <div style={ { height: .5, background: '#00C689' } }></div>
             </div>
         );
     }

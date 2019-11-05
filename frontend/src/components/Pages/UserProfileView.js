@@ -6,6 +6,7 @@ import BaseTemplate from '../BaseTemplate';
 
 import AddUserModal from '../Forms/AddUserModal';
 import DeleteUserModal from '../Forms/DeleteUserModal';
+// import { withTheme } from '@material-ui/styles';
 
 // import scary from '../../Images/CryptKeeper.jpg';
 
@@ -19,6 +20,7 @@ const UserProfileView = () => {
                     <DeleteUserModal />
                     <AddUserModal />
                 </div>
+                <p style={ { color: 'white', padding: 15, fontSize: 24 } }>To see a demo of a portfolio, please click on the login button and enter 'igor@igor' for the username and 'igor' for the password </p>
             </div>
 
         </BaseTemplate>

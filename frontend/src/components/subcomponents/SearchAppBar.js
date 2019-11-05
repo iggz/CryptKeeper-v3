@@ -22,8 +22,6 @@ const useStyles = makeStyles({
         fontWeight: 600,
         fontSize: 25,
         align: 'center'
-
-
     },
 });
 
@@ -36,7 +34,7 @@ export default function SearchAppBar(props) {
                 <Toolbar style={ { background: '#1E2632' } }>
                     <img src={ logo } alt="logo" />
 
-                    <Typography style={ { paddingLeft: 60 } } className={ classes.title } variant="h6" noWrap>
+                    <Typography style={ { paddingLeft: 30 } } className={ classes.title } variant="h6" noWrap>
                         CryptKeeper
                     </Typography>
 

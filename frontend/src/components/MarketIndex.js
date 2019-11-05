@@ -59,14 +59,14 @@ class MarketIndex extends Component {
                 <>
                     { this.state.list.map((item, index) => (
                         <div border={ 10 } key={ index } >
-                            <div style={ { height: .5, background: '#00C689' } }></div>
+                            {/* <div style={ { height: .5, background: '#00C689' } }></div> */ }
                             <MarketIndexRow
                                 id={ item.id }
                                 name={ item.name }
                                 ticker={ item.ticker }
 
                             />
-                            <div style={ { height: .5, background: '#00C689' } }></div>
+                            {/* <div style={ { height: .5, background: '#00C689' } }></div> */ }
 
                         </div>
 

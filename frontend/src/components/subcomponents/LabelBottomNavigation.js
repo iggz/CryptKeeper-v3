@@ -5,9 +5,6 @@ import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import List from '@material-ui/icons/List';
 import TrendingUp from '@material-ui/icons/TrendingUp';
-
-
-
 import AccountBox from '@material-ui/icons/AccountBox';
 import DonutLarge from '@material-ui/icons/DonutLarge';
 
@@ -38,6 +35,13 @@ export default function LabelBottomNavigation() {
 
         <BottomNavigation style={ { color: '#00C689' } } value={ value } onChange={ handleChange } className={ classes.root }>
             <BottomNavigationAction style={ { color: '#00C689' } }
+                label="Demo"
+                value="Demo"
+                icon="Demo"
+                component={ Link }
+                to="/"
+            />
+            <BottomNavigationAction style={ { color: '#00C689' } }
                 label="Dashboard"
                 value="dashboard"
                 icon={ <List style={ { color: '#00C689' } } /> }
@@ -54,7 +58,7 @@ export default function LabelBottomNavigation() {
             <BottomNavigationAction style={ { color: '#00C689' } }
                 label="Portfolio"
                 value="portfolio"
-                icon={ <DonutLarge style={ { color: '#00C689' } }>folder</DonutLarge> }
+                icon={ <DonutLarge style={ { color: '#00C689' } }></DonutLarge> }
                 component={ Link }
                 to="/three"
             />
